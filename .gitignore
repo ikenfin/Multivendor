@@ -7,6 +7,7 @@ seller/config.php
 **/seller/system/storage/*
 seller/system/storage/logs/error.log
 **/system/storage/logs/error.log
+system/storage/logs/error.log
 
 
 

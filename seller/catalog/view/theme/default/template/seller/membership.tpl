@@ -77,7 +77,7 @@
 				<input type="hidden" name="cancel_return" value="<?php echo $cancelURL;?>">
 				<input type="hidden" name="return" value="<?php echo $notify_url; ?>">
 				<input type="hidden" name="notify_url" value="<?php echo $notify_url; ?>">
-				<input type="submit" class="btn btn-primary" value="Upgrade" onclick="paypal<?php echo $getmembership['commission_id']; ?>();"/>
+				<input type="submit" class="btn btn-primary" value="Upgrade" onclick="paypal<?php echo $getmembership['commission_id']; ?>()"/>
 			</form>
 		   <script>
 			function paypal<?php echo $getmembership['commission_id']; ?>(){
@@ -86,10 +86,10 @@
 			</script>
 		<?php }else{ ?>
 		 <input type="button" class="btn btn-primary" value="Upgrade"
-		   onclick="updatemember<?php echo; $getmembership['commission_id'];?>
-		   ('<?php echo $getmembership['commission_id;;;;'];?>';)">
+		   onclick="updatemember<?php echo $getmembership['commission_id'];?>
+		   ('<?php echo $getmembership['commission_id'];?>')">
                 <script>
-				 function updatemember<?php echo; $getmembership['commission_id'];?>(commission_id); {
+				 function updatemember<?php echo $getmembership['commission_id'];?>(commission_id) {
 				$.ajax({
 				url: 'index.php?route=seller/membership/update',
 				type: 'post',
