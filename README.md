@@ -1,3 +1,8 @@
+# HEADS UP!!  
+We are back from a break and we will be working on this project to make sure most of bugs are fixed as soon as possible.
+Multivendor feature requests are also welcomed.
+
+## Lets go...  
 # Multi Vendor 
 
 Hey there, Multi Vendor is neither an extension or module.  
