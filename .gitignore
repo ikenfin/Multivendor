@@ -1,22 +1,10 @@
-<<<<<<< HEAD
 admin/config.php
 seller/config.php
 /config.php
 system/storage/cache/*
+!system/storage/cache/index.html 
 seller/system/storage/cache/*
-
-=======
-config.php
-admin/config.php
-seller/config.php
-**/image/*
-**/system/storage/*
-**/seller/image/*
-**/seller/system/storage/*
-seller/system/storage/logs/error.log
-**/system/storage/logs/error.log
-system/storage/logs/error.log
->>>>>>> 3b02fa0fb91de6282651644957ec01c7977c59e4
+!seller/system/storage/cache/index.html 
 
 
 
