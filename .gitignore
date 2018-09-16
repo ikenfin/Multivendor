@@ -4,7 +4,9 @@ seller/config.php
 system/storage/cache/*
 !system/storage/cache/index.html 
 seller/system/storage/cache/*
-!seller/system/storage/cache/index.html 
+!seller/system/storage/cache/index.html
+#igonore all .log files
+*.log 
 
 
 

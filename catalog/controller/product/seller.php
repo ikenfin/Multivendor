@@ -50,33 +50,12 @@ class ControllerProductSeller extends Controller {
 		
 		$seller_info = $this->model_catalog_seller->getSeller($seller_id);
 		if ($seller_info) {
-	  		$this->document->setTitle($seller_info['name']);
+	  		$this->document->setTitle(ucwords($seller_info['name']));
 						
-			$data['heading_title'] = $seller_info['name'];
-            $data['seller_since']    = date('Y-M',strtotime($seller_info['date_added'])) ;
-
-			$data['text_refine'] = $this->language->get('text_refine');
-			$data['text_empty'] = $this->language->get('text_empty');
-			$data['text_quantity'] = $this->language->get('text_quantity');
-			$data['text_manufacturer'] = $this->language->get('text_manufacturer');
-			$data['text_model'] = $this->language->get('text_model');
-			$data['text_price'] = $this->language->get('text_price');
-			$data['text_tax'] = $this->language->get('text_tax');
-			$data['text_points'] = $this->language->get('text_points');
+			$data['heading_title'] = ucwords($seller_info['name']);
+			$data['tab_about']   = sprintf($this->language->get('tab_about'), ucwords($seller_info['name'])) ;
+            $data['seller_since']   = sprintf($this->language->get('text_since'), date('Y-M',strtotime($seller_info['date_added']))) ;
 			$data['text_compare'] = sprintf($this->language->get('text_compare'), (isset($this->session->data['compare']) ? count($this->session->data['compare']) : 0));
-			$data['text_display'] = $this->language->get('text_display');
-			$data['text_list'] = $this->language->get('text_list');
-			$data['text_grid'] = $this->language->get('text_grid');
-			$data['text_sort'] = $this->language->get('text_sort');
-			$data['text_limit'] = $this->language->get('text_limit');
-					
-			$data['button_cart'] = $this->language->get('button_cart');
-			$data['button_wishlist'] = $this->language->get('button_wishlist');
-			$data['button_compare'] = $this->language->get('button_compare');
-			$data['button_continue'] = $this->language->get('button_continue');
-			
-			$data['button_list'] = $this->language->get('button_list');
-			$data['button_grid'] = $this->language->get('button_grid');
 			
 			$this->load->model('tool/image');
 			
@@ -119,9 +98,11 @@ class ControllerProductSeller extends Controller {
 			$data['sellers'] = array();
 			
 			$data['seller_id'] = $seller_id;
-			
+
 			$data['sellereview'] = $this->model_catalog_seller->getSellerReview($seller_id);
-			$data['sellerating'] = (int)$this->model_catalog_seller->getSellerRating($seller_id);
+			$data['seller_rating'] = (int)$this->model_catalog_seller->getSellerRating($seller_id);
+			$data['seller_href'] = $this->url->link('seller/review');
+			$data['seller_total_orders'] = $this->model_catalog_seller->getTotalOrders($seller_id);
 
 			$data['products'] = array();
 			

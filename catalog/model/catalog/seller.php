@@ -1,5 +1,13 @@
 <?php
 class ModelCatalogSeller extends Model {
+	
+	public function getTotalOrders($seller_id) {
+		$sql = "SELECT COUNT(*) AS total FROM `" . DB_PREFIX . "order` o WHERE o.order_id IN 
+		(select distinct order_id from " . DB_PREFIX . "order_product where seller_id = '" . (int)$seller_id."') AND o.order_status_id > '0'";
+		$query = $this->db->query($sql);
+		return $query->row['total'];
+	}
+
 	public function getSeller($seller) {
 		$query = $this->db->query("SELECT DISTINCT *, CONCAT(firstname, ' ',lastname) AS name FROM " . DB_PREFIX . "sellers  where seller_id = '" . (int)$seller. "' AND status=1 AND approved=1	ORDER BY date_added ");
 		return $query->row;
