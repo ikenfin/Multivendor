@@ -45,7 +45,7 @@ class ControllerProductSeller extends Controller {
 		if (isset($this->request->get['seller_id'])) {
 		    $seller_id = $this->request->get['seller_id'];
 		} else {
-			$seller_id=0;
+			$seller_id = 0;
 		}
 		
 		$seller_info = $this->model_catalog_seller->getSeller($seller_id);
@@ -318,12 +318,6 @@ class ControllerProductSeller extends Controller {
 				
 			$this->document->setTitle($this->language->get('text_error'));
 
-      		$data['heading_title'] = $this->language->get('text_error');
-
-      		$data['text_error'] = $this->language->get('text_error');
-
-      		$data['button_continue'] = $this->language->get('button_continue');
-
       		$data['continue'] = $this->url->link('common/home');
 
 
@@ -333,7 +327,6 @@ class ControllerProductSeller extends Controller {
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
-
 
 			$this->response->setOutput($this->load->view('error/not_found', $data));
 

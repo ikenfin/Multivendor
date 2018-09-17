@@ -31,8 +31,17 @@ Multi Vendor features include
 14. Seller  Membership Plans and commission based charges
 15. Customers can review sellers.
 16. Different seller dashboard.
-27. Custom settings in the admin back end for further customization.
+17. Custom settings in the admin back end for further customization.
+ And much more...    
+## DEMO 
+Demo details
+[SELLER PANEL](http://multivendor.ovicko.com/seller/index.php?route=seller/login)
+**Seller Username:** multivendor@demo.com
+**Seller  Password:** multivendor@demo.com
 
+[ADMIN PANEL](http://multivendor.ovicko.com/admin/index.php)
+**Admin Username:** AdminDemo
+**Admin Password:** AdminDemo  
 
 ## Installation
 Unzip the zip files to your web directory.  
