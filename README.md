@@ -34,13 +34,13 @@ Multi Vendor features include
 17. Custom settings in the admin back end for further customization.
  And much more...    
 ## DEMO 
-Demo details
-[SELLER PANEL](http://multivendor.ovicko.com/seller/index.php?route=seller/login)
-**Seller Username:** multivendor@demo.com
-**Seller  Password:** multivendor@demo.com
+Demo details  
+[SELLER PANEL](http://multivendor.ovicko.com/seller/index.php?route=seller/login)  
+**Seller Username:** multivendor@demo.com  
+**Seller  Password:** multivendor@demo.com  
 
-[ADMIN PANEL](http://multivendor.ovicko.com/admin/index.php)
-**Admin Username:** AdminDemo
+[ADMIN PANEL](http://multivendor.ovicko.com/admin/index.php)  
+**Admin Username:** AdminDemo  
 **Admin Password:** AdminDemo  
 
 ## Installation
