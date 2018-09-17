@@ -206,7 +206,7 @@ class ControllerSettingSetting extends Controller {
 				'value' => $code
 			);
 		}
-			
+
 		if (isset($this->request->post['config_layout_id'])) {
 			$data['config_layout_id'] = $this->request->post['config_layout_id'];
 		} else {
@@ -648,7 +648,7 @@ class ControllerSettingSetting extends Controller {
 		if (isset($this->request->post['config_captcha_page'])) {
 			$data['config_captcha_page'] = $this->request->post['config_captcha_page'];
 		} elseif ($this->config->has('config_captcha_page')) {
-		   	$data['config_captcha_page'] = $this->config->get('config_captcha_page');
+			$data['config_captcha_page'] = $this->config->get('config_captcha_page');
 		} else {
 			$data['config_captcha_page'] = array();
 		}
@@ -757,7 +757,7 @@ class ControllerSettingSetting extends Controller {
 		if (isset($this->request->post['config_mail_alert'])) {
 			$data['config_mail_alert'] = $this->request->post['config_mail_alert'];
 		} elseif ($this->config->has('config_mail_alert')) {
-		   	$data['config_mail_alert'] = $this->config->get('config_mail_alert');
+			$data['config_mail_alert'] = $this->config->get('config_mail_alert');
 		} else {
 			$data['config_mail_alert'] = array();
 		}
@@ -884,23 +884,14 @@ class ControllerSettingSetting extends Controller {
 			$data['commissions'][] = array(
 				'commission_id' 	=> $result['commission_id'],
 				'name' 	=> $result['commission_name'],
-		);
+			);
 		}
-		$data['tab_seller'] = $this->language->get('tab_seller');
-		$data['entry_default_commission'] = $this->language->get('entry_default_commission');
-		$data['entry_default_category'] = $this->language->get('entry_default_category');
-		$data['entry_eligible_payment'] = $this->language->get('entry_eligible_payment');
-		$data['text_select_all'] = $this->language->get('text_select_all');
-		$data['text_unselect_all'] = $this->language->get('text_unselect_all');
-		$data['text_orderstatus'] = $this->language->get('text_orderstatus');
-		$data['entry_product_autoapprove'] = $this->language->get('entry_product_autoapprove');
-		$data['entry_saccount_terms'] = $this->language->get('entry_saccount_terms');
-		$data['entry_seller_autoapprove'] = $this->language->get('entry_seller_autoapprove');
+
 		if (isset($this->request->post['config_sellercommission_id'])) {
-		$data['config_sellercommission_id'] = $this->request->post['config_sellercommission_id'];	
+			$data['config_sellercommission_id'] = $this->request->post['config_sellercommission_id'];	
 		} 
 		else {		
-		$data['config_sellercommission_id'] = $this->config->get('config_sellercommission_id');	
+			$data['config_sellercommission_id'] = $this->config->get('config_sellercommission_id');	
 		}
 		$this->load->model('catalog/category');
 		$data['categories'] = $this->model_catalog_category->getCategories12(0);
@@ -915,46 +906,53 @@ class ControllerSettingSetting extends Controller {
 			$data['config_product_category'] = array();			
 		}
 		$this->load->model('localisation/order_status');
+
 		$data['orderstatuses'] = $this->model_localisation_order_status->getOrderStatuses(array());
+
 		if (isset($this->request->post['config_seller_orderstatuses'])) {
-		$data['config_seller_orderstatuses'] = $this->request->post['config_seller_orderstatuses'];
+			$data['config_seller_orderstatuses'] = $this->request->post['config_seller_orderstatuses'];
 		} elseif ($this->config->get('config_seller_orderstatuses')) {
-		$data['config_seller_orderstatuses'] = $this->config->get('config_seller_orderstatuses');	
+			$data['config_seller_orderstatuses'] = $this->config->get('config_seller_orderstatuses');	
 		} else {
-		$data['config_seller_orderstatuses'] = array();			
+			$data['config_seller_orderstatuses'] = array();			
 		}
 		if (isset($this->request->post['config_seller_payments'])) {
-		$data['config_seller_payments'] = $this->request->post['config_seller_payments'];
+			$data['config_seller_payments'] = $this->request->post['config_seller_payments'];
 		} elseif ($this->config->get('config_seller_payments')) {
-		$data['config_seller_payments'] = $this->config->get('config_seller_payments');	
+			$data['config_seller_payments'] = $this->config->get('config_seller_payments');	
 		} else {
-		$data['config_seller_payments'] = array();			
+			$data['config_seller_payments'] = array();			
 		}
 		if (isset($this->request->post['config_product_autoapprove'])) {
-		$data['config_product_autoapprove'] = $this->request->post['config_product_autoapprove'];	
+			$data['config_product_autoapprove'] = $this->request->post['config_product_autoapprove'];	
 		} else {		
-		$data['config_product_autoapprove'] = $this->config->get('config_product_autoapprove');	
+			$data['config_product_autoapprove'] = $this->config->get('config_product_autoapprove');	
 		}
+
 		if (isset($this->request->post['config_seller_autoapprove'])) {
-		$data['config_seller_autoapprove'] = $this->request->post['config_seller_autoapprove'];	
+			$data['config_seller_autoapprove'] = $this->request->post['config_seller_autoapprove'];	
 		} else {		
-		$data['config_seller_autoapprove'] = $this->config->get('config_seller_autoapprove');	
+			$data['config_seller_autoapprove'] = $this->config->get('config_seller_autoapprove');	
 		}
+
 		if (isset($this->request->post['config_selleraccount_id'])) {
-		$data['config_selleraccount_id'] = $this->request->post['config_selleraccount_id'];	
+			$data['config_selleraccount_id'] = $this->request->post['config_selleraccount_id'];	
 		} else {		
-		$data['config_selleraccount_id'] = $this->config->get('config_selleraccount_id');	
+			$data['config_selleraccount_id'] = $this->config->get('config_selleraccount_id');	
 		}
-		if (isset($this->request->post['config_defaultseller_id'])) {
-		$data['config_defaultseller_id'] = $this->request->post['config_defaultseller_id'];	
+
+
+		if (isset($this->request->post['config_category_autoapprove'])) {
+			$data['config_category_autoapprove'] = $this->request->post['config_category_autoapprove'];	
 		} else {		
-		$data['config_defaultseller_id'] = $this->config->get('config_defaultseller_id');	
+			$data['config_category_autoapprove'] = $this->config->get('config_category_autoapprove');	
 		}
-		$data['entry_default_seller'] = $this->language->get('entry_default_seller');
+
+
 		$this->load->model('sale/seller');		
 		$data['sellers'] = $this->model_sale_seller->getSellers();
 		/*END OVICKO MULTISELLER*/
-			
+
 		$data['header'] = $this->load->controller('common/header');
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['footer'] = $this->load->controller('common/footer');

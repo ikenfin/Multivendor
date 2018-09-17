@@ -68,6 +68,7 @@ class ControllerSellerProduct extends Controller {
 		$this->document->setTitle($this->language->get('heading_title1')); 
 	
 		$this->load->model('seller/product');
+		//var_dump($this->config->get('config_product_autoapprove'));
 	
 		if (!$this->OverMaxLimit()) {
 	
@@ -75,7 +76,7 @@ class ControllerSellerProduct extends Controller {
 	
 				$this->model_seller_product->addProduct($this->request->post);
 	
-				if ($this->config->get('config_product_autoapprove')) {
+				if ($this->config->get('config_product_autoapprove') == "1") {
 	
 					$this->session->data['success'] = $this->language->get('text_success1');
 	

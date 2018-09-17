@@ -49,12 +49,13 @@
                     <?php } else { ?>
                     <a href="<?php echo $sort_name; ?>"><?php echo $column_name; ?></a>
                     <?php } ?></td>
+                    <td class="text-right"><?php echo $column_status; ?></td>
                   <td class="text-right"><?php if ($sort == 'sort_order') { ?>
                     <a href="<?php echo $sort_sort_order; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_sort_order; ?></a>
                     <?php } else { ?>
                     <a href="<?php echo $sort_sort_order; ?>"><?php echo $column_sort_order; ?></a>
                     <?php } ?></td>
-					 <td class="text-right"><?php echo $column_action; ?></td>
+					       <td class="text-right"><?php echo $column_action; ?></td>
                 </tr>
               </thead>
               <tbody>
@@ -62,6 +63,12 @@
                 <?php foreach ($categories as $category) { ?>
                 <tr>
                   <td class="text-left"><?php echo $category['name']; ?></td>
+                  <?php if($category['approve'] == 1){ ?>
+                  <td class="text-right"><?php echo $text_category_approved; ?></td>
+                  <?php } else { ?>
+                  <td class="text-right"><?php echo $text_category_not_approved; ?></td>
+                  <?php } ?>
+
                   <td class="text-right"><?php echo $category['sort_order']; ?></td>
 				          <?php if($category['approve']==0){ ?>
                   <td class="text-right"><a href="<?php echo $category['edit']; ?>" data-toggle="tooltip" title="<?php echo $button_edit; ?>" class="btn btn-primary"><i class="fa fa-pencil"></i></a></td>

@@ -228,6 +228,7 @@ class ControllerSellerRegister extends Controller {
 		} else {
 			$data['error_captcha'] = '';
 		}
+    	
     	$data['action'] = $this->url->link('seller/register', '', 'SSL');
 		if (isset($this->request->post['username'])) {
     		$data['username'] = $this->request->post['username'];

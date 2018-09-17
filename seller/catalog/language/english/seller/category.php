@@ -8,10 +8,13 @@ $_['text_default']           = 'Default';
 $_['text_image_manager']     = 'Image Manager';
 $_['text_browse']            = 'Browse Files';
 $_['text_clear']             = 'Clear Image';
+$_['text_category_approved'] = 'Approved';
+$_['text_category_not_approved']   = 'Not Approved';
 // Column
 $_['column_name']            = 'Category Name';
 $_['column_sort_order']      = 'Sort Order';
 $_['column_action']          = 'Action';
+$_['column_status']          = 'Status';
 // Entry
 $_['entry_name']             = 'Category Name';
 $_['entry_description']      = 'Description';
@@ -146,6 +149,7 @@ $_['text_edit']         = 'Edit';
 $_['text_no_results']         = 'No Result Found';
 $_['text_success']      = 'Thank you for posting your category.Your Category has been sent to admin for approval';
 $_['text_modify']      = 'You have successfully modified category!';
+$_['text_success_approved']      = 'Thank you for posting your category.Your Category has been  approved';
 // Help
 $_['help_filter']            = '(Autocomplete)';
 $_['help_keyword']           = 'Do not use spaces, instead replace spaces with - and make sure the keyword is globally unique.';

@@ -1,22 +1,7 @@
 <?php
 // Heading
-
-            /*START OVICKO MULTISELLER*/
-				$_['tab_seller']         = 'Seller';
-				$_['text_select_all']         = 'Select All';
-				$_['text_unselect_all']         = 'UnSelect All';
-				$_['text_orderstatus']         = 'Seller Order Statuses';
-				$_['entry_default_commission'] = 'Select Default commission:';
-				$_['entry_default_category'] = 'Seller default categories permission:';
-				$_['entry_eligible_payment'] = 'Seller Eligible for Payment:';
-				$_['entry_default_seller'] = 'Select Default Seller';
-				$_['entry_product_autoapprove'] = 'New Product auto approve:';
-				$_['entry_seller_autoapprove'] = 'New Seller auto approve:';
-				$_['entry_saccount_terms'] = 'Seller Account Terms:<br><span class="help">Forces customers to agree to terms before an account can be created.</span>';
-			/*END OVICKO MULTISELLER*/
-			
 $_['heading_title']                  = 'Settings';
-
+$_['tab_seller']         = 'Seller';
 // Text
 $_['text_stores']                    = 'Stores';
 $_['text_success']                   = 'Success: You have modified settings!';
@@ -47,6 +32,10 @@ $_['text_general']                   = 'General';
 $_['text_security']                  = 'Security';
 $_['text_upload']                    = 'Uploads';
 $_['text_error']                     = 'Error Handling';
+$_['text_select_all']		         = 'Select All';
+$_['text_unselect_all']		         = 'UnSelect All';
+$_['text_orderstatus']		         = 'Seller Order Statuses';
+
 
 // Entry
 $_['entry_meta_title']               = 'Meta Title';
@@ -137,6 +126,15 @@ $_['entry_error_display']            = 'Display Errors';
 $_['entry_error_log']                = 'Log Errors';
 $_['entry_error_filename']           = 'Error Log Filename';
 $_['entry_status']                   = 'Status';
+$_['entry_default_commission'] 		 = 'Select Default commission:';
+$_['entry_default_category']		 = 'Seller default categories permission:';
+$_['entry_eligible_payment']		 = 'Seller Eligible for Payment:';
+$_['entry_default_seller']			 = 'Select Default Seller';
+$_['entry_product_autoapprove']		 = 'New Seller Product Auto approve:';
+$_['entry_seller_autoapprove']		 = 'New Seller Auto approve:';
+$_['entry_saccount_terms']			 = 'Seller Account Terms:<br><span class="help">Forces customers to agree to terms before an account can be created.</span>';
+$_['entry_category_autoapprove']	 = 'New Seller Category Auto approve:';
+
 
 // Help
 $_['help_geocode']                   = 'Please enter your store location geocode manually.';

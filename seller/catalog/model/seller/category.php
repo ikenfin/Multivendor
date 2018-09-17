@@ -130,6 +130,10 @@ class ModelSellerCategory extends Model {
 				}
 			}
 		}
+
+		if ($this->config->get('config_category_autoapprove')) {
+			$this->db->query("UPDATE " . DB_PREFIX . "category SET approve = 1 WHERE category_id = '" . (int)$category_id . "'");
+		}
 		
 		$this->load->language('seller/category');
 		$subject = sprintf($this->language->get('text_subject'), $this->config->get('config_name'));
