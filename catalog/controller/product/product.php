@@ -161,23 +161,9 @@ class ControllerProductProduct extends Controller {
 		} else {
 			$seller_id = $this->model_catalog_product->getDefaultSeller($product_id);
 		}
-		/*END OVICKO MULTISELLER*/
-
-        /*START OVICKO MULTISELLER*/
+		
 		$product_info = $this->model_catalog_product->getSProduct($product_id,$seller_id);
-		/*END OVICKO MULTISELLER*/
-
-        /*START OVICKO MULTISELLER*/
 		$this->load->model('catalog/seller');
-		$data['column_seller'] = $this->language->get('column_seller');
-		$data['contact_seller'] = $this->language->get('contact_seller');
-		$data['text_more'] = $this->language->get('text_more');
-		$data['text_sellers'] = $this->language->get('text_sellers');
-		$data['text_seller'] = $this->language->get('text_seller');
-		$data['text_choices'] = $this->language->get('text_choices');
-		$data['text_seller_rating'] = $this->language->get('text_seller_rating');
-		$data['text_price'] = $this->language->get('text_price');
-		$data['text_action'] = $this->language->get('text_action');
 	    $seller_info = $this->model_catalog_seller->getSeller($seller_id);
 		$data['seller_name'] = '';
 		$data['sellerlink']	   = "";
