@@ -61,37 +61,26 @@ Configure these seller settings in the sellers tab
 - Seller Eligible for Payment
 
 You can now access the seller dashboard at yourdomain/seller/index.php  
-  
-##  Screenshots 
-###  Seller  dashboard  
-![Seller Dashboard](screenshots/SellerDashboard.png)
-###  Seller  products  
-![Seller Products](screenshots/seler%20Products.png)
-###  Admin Seller settings  
-![Seller Products](screenshots/adminSettings.png)
-###  Seller Messages
-![Seller Products](screenshots/SELLERMessages.png)
-###  Seller  Order history  
-![Seller Products](screenshots/SELLER_ORDER_HISTORY.png)
-###  Seller  Order  Info 
-![Seller Products](screenshots/ORDER_INFO.png)
 ## To do
-Fix code intentions and adapt standard OpenCart coding styles.
+- Fix code intentions and adapt standard OpenCart coding styles.  
+- Write Multi Vendor theme development structure.  
+- Write Multi Vendor module development structure.  
+
 ## Extensions
 Multi Vendor extensions can be created using the same pattern like OpenCart extensions.
 VQMODS will work though you have to check if they really fit with the Multi Vendor script.
-You can submit your extensions to [CodLance](https://codlance.com) for sale or for free.
-## Themes
-Get  [Journal Theme for MultiVendor](https://yiirestful.ovicko.com/journal-theme-for-multivendor-is-finally-here/)  
-  
-Get the latest Multi Vendor themes on [our website](https://codlance.com)
-![Moonsoon theme](multivendor_moonsoon_preview.png)
+
+## Themes  
+Currently we can't say which theme will exactly fit with our Multi Vendor, though we offer customization of OpenCart themes to fit this Multi Vendor at a cost of $40.  
+Email: info@ovicko.com for questions regarding customization.  
+
 ## Credits
 This software is built on top of [OpenCart](http://opencart.com) .
-Additional software and development done by [Ovicko](https://ovicko.com).
+Additional software and development done by [Ovicko](http://ovicko.com).
 
 Submit any issues so that we help make this a great software.
-## Support this Project
+## Support this Project  
+If you like our work and you are willing to donate something to help us focus on this project please do so via the link.  
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=K7HBK7452TH2U)
 # Disclaimer
 This program is distributed in the hope that it will be useful,
