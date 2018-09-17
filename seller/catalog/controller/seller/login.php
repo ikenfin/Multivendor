@@ -1,6 +1,7 @@
 <?php
 class ControllerSellerLogin extends Controller {
 	private $error = array();
+	
 	public function index() {
 		$this->load->model('seller/seller');
 		// Login override for admin users
@@ -85,7 +86,6 @@ class ControllerSellerLogin extends Controller {
 		$data['text_home'] = $this->language->get('text_home');
 		$data['heading_title'] = $this->language->get('heading_title');
 		$data['home'] = HTTP_SERVER1;
-		$data['register'] = $this->url->link('seller/register');
 		$data['text_new_seller'] = $this->language->get('text_new_seller');
 		$data['text_register'] = $this->language->get('text_register');
 		$data['text_register_account'] = $this->language->get('text_register_account');

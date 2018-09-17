@@ -12,10 +12,13 @@ class ControllerSellerRegister extends Controller {
 		$this->document->addStyle('catalog/view/javascript/jquery/datetimepicker/bootstrap-datetimepicker.min.css');
 		$this->load->model('seller/seller');
 		$data['name'] = $this->config->get('config_name');
-		$data['home'] = HTTP_SERVER1;
+		$data['home'] = HTTPS_SERVER1;
 		if (is_file(DIR_IMAGE . $this->config->get('config_logo'))) {
-				$data['logo'] = HTTP_SERVER1. 'image/' . $this->config->get('config_logo');
-		} else {			$data['logo'] = '';		}
+				$data['logo'] = HTTPS_SERVER1. 'image/' . $this->config->get('config_logo');
+		} else {
+			$data['logo'] = '';
+		}
+
     	if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
 			$sellid =  $this->model_seller_seller->addSeller($this->request->post);
 			unset($this->session->data['guest']);
@@ -38,11 +41,11 @@ class ControllerSellerRegister extends Controller {
 					$cmt = $query->row['amount'];
 				$this->response->redirect($this->url->link('seller/pay&cmt=' . $cmt.'&gid=' . $this->request->post['new_commission_id']
 				 .'&customs=' . $customs));
-				}else{
-				$this->response->redirect($this->url->link('seller/success'));
+				} else {
+					$this->response->redirect($this->url->link('seller/success'));
 				}
-			}else{
-			$this->response->redirect($this->url->link('seller/success'));
+			} else {
+				$this->response->redirect($this->url->link('seller/success'));
 			}
     	}
     	$data['heading_title'] = $this->language->get('heading_title');
@@ -388,22 +391,23 @@ class ControllerSellerRegister extends Controller {
 		} else {
 			$data['new_commission_id'] = $this->config->get('config_sellercommission_id');
 		}
-			$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "commission ORDER BY commission_id");
-			$data['ncommissions'] = array();
-			$ncommissions = $query->rows;
-			foreach ($ncommissions as $result) {
-				   $data['ncommissions'][] = array(
-					'commission_id' 	=> $result['commission_id'],
-					'commission_name' 	=> $result['commission_name'],
-					'amount' 	=>$result['amount'],
-					'commission'    	=> $result['commission'],
-					'per'    	=> $result['per'],
-					'duration_id'    	=> $result['duration_id'],
-					'product_limit'    	=> $result['product_limit'],
-					'amt'    	=> $result['amount'],
-					'amount1' =>  $this->currency->format($result['amount'])
-				);
-			}
+
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "commission ORDER BY commission_id");
+		$data['ncommissions'] = array();
+		$ncommissions = $query->rows;
+		foreach ($ncommissions as $result) {
+			   $data['ncommissions'][] = array(
+				'commission_id' 	=> $result['commission_id'],
+				'commission_name' 	=> $result['commission_name'],
+				'amount' 	=>$result['amount'],
+				'commission'    	=> $result['commission'],
+				'per'    	=> $result['per'],
+				'duration_id'    	=> $result['duration_id'],
+				'product_limit'    	=> $result['product_limit'],
+				'amt'    	=> $result['amount'],
+				'amount1' =>  $this->currency->format($result['amount'])
+			);
+		}
 		$data['column_left'] = $this->load->controller('common/column_left');
 		$data['column_right'] =
 		$data['content_top'] = $this->load->controller('common/content_top');
