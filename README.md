@@ -40,7 +40,9 @@ Demo details
 
 [ADMIN PANEL](http://multivendor.ovicko.com/admin/index.php)  
 **Admin Username:** AdminDemo  
-**Admin Password:** AdminDemo  
+**Admin Password:** AdminDemo    
+
+[Join Multi Vendor Facebook Group](https://www.facebook.com/groups/codlance/)  
 
 ## Installation
 Unzip the zip files to your web directory.  
