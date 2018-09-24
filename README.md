@@ -73,7 +73,7 @@ Multi Vendor extensions can be created using the same pattern like OpenCart exte
 VQMODS will work though you have to check if they really fit with the Multi Vendor script.
 
 ## Themes  
-Currently we can't say which theme will exactly fit with our Multi Vendor, though we offer customization of OpenCart themes to fit this Multi Vendor at a cost of $40.  
+Currently we can't say which theme will exactly fit with our Multi Vendor, though we offer customization of OpenCart themes to fit this Multi Vendor at a cost.  
 Email: info@ovicko.com for questions regarding customization.  
 
 ## Credits
